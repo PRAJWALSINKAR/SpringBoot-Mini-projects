@@ -1,0 +1,24 @@
+package prajwal.in;
+
+
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import prajwal.in.service.Service;
+
+@SpringBootApplication
+public class PractiseJpaApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = SpringApplication.run(PractiseJpaApplication.class, args);
+		Service service = context.getBean(Service.class);
+		//service.getEmp(101);
+	//	service.saveEmployee();
+		//service.getEmployee();
+		service.getPagination();
+	//	service.updateEmployee(107,"mouse", 4040.00);
+	}
+
+}

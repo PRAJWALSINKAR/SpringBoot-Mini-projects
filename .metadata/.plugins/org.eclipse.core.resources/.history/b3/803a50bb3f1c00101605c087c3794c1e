@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http:/thymeleaf.org">
+	<head>
+		 <meta charset="Utf-8">
+		 <title>Todo Apllication</title>
+	</head>
+	<body>
+		<h1>Tode Application</h1>
+	</body>
+	<div>
+		<th:block th:each="task : ${tasks}"></th:block>
+	</div>
+</html>

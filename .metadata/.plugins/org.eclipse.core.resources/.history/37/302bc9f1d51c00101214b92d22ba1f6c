@@ -1,0 +1,5 @@
+package praj.in.model;
+
+public class ChatMessage {
+
+}

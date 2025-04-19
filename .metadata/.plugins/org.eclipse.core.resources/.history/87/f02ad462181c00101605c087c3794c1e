@@ -1,0 +1,5 @@
+package praj.in.repository;
+
+public interface TaskRepository {
+
+}

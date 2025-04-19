@@ -1,0 +1,24 @@
+package praj.in.controler;
+
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import praj.in.model.ChatMessage;
+
+@RestController
+public class chatController {
+	// /app/sendMessge
+	@MessageMapping("/sendMessage")
+	@SendTo("/topic/messages")
+   public ChatMessage sendMessagge(ChatMessage msg) {
+	   return msg;
+   }
+	
+	@GetMapping("chat")
+	public String chat() {
+		return "chat";
+	}
+}

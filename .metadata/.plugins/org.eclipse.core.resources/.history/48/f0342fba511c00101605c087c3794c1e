@@ -1,0 +1,48 @@
+package praj.in.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import praj.in.models.Task;
+import praj.in.repository.TaskRepository;
+
+@Service
+public class TaskService {
+  
+	  private final TaskRepository taskRepository;
+	  
+	  public TaskService(TaskRepository taskRepository) {
+		  this.taskRepository = taskRepository;
+	  }
+	  
+	public List<Task> getAllTasks() {
+		// TODO Auto-generated method stub
+		return taskRepository.findAll();
+		
+	}
+
+	public void createrTask(String title) {
+		// TODO Auto-generated method stub
+		Task task = new Task();
+		task.setTitle(title);
+		task.setCompleted(false);
+		taskRepository.save(task);
+		
+	}
+
+	public void deleteTask(Long id) {
+		// TODO Auto-generated method stub
+		taskRepository.deleteById(id);
+		
+	}
+
+	public void toggleTask(Long id) {
+		Task task = taskRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("Invalid task"));
+		        task.setCompleted(task.isCompleted());
+		taskRepository.save(task);
+		
+	}
+
+}

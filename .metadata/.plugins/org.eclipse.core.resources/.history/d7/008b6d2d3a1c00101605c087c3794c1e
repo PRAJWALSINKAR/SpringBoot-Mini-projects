@@ -1,0 +1,17 @@
+package praj.in.controller;
+
+import org.springframework.stereotype.Controller;
+
+import praj.in.services.TaskService;
+
+
+
+@Controller
+public class TaskController {
+    
+	private final TaskService taskservice ;
+	
+	public TaskController(TaskService taskService) {
+		this.taskservice = taskService;
+	}
+}
