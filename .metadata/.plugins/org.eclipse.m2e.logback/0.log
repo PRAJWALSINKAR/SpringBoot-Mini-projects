@@ -120,3 +120,4 @@
 2025-06-23 15:38:32,589 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\Shree\Desktop\FULL STACK\JRTP\workspace\00 -MINI PROJECTS\01_Insurance_Report_App\src\test\resources
 2025-06-23 15:38:32,589 [Worker-20: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of 01_Insurance_Report_App
 2025-06-23 15:38:32,589 [Worker-20: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for 01_Insurance_Report_App
+2025-06-23 15:40:42,713 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
