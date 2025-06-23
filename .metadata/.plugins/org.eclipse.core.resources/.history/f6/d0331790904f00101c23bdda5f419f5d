@@ -1,0 +1,30 @@
+package in.prajwal.runner;
+
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
+
+import in.prajwal.entity.CitizenPlan;
+import in.prajwal.repo.CitizenPlanRepository;
+
+@Component
+public class DataLoader implements ApplicationRunner{
+     
+	@Autowired
+	private CitizenPlanRepository repo; 
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+	     //cash plan data
+		CitizenPlan c1 = new CitizenPlan();
+		c1.setCitizenName("John");
+		c1.setGender("male");
+		c1.setPlanName("cash");
+		c1.setPlanStartDate(LocalDate.now());
+		c1.setPlanEndDate(LocalDate.now().plusMonths(6));
+		c1.setBenefitAmt(5000.00);
+	}
+
+}

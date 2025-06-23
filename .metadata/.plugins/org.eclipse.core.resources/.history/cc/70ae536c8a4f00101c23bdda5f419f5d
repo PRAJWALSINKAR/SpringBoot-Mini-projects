@@ -1,0 +1,22 @@
+package in.prajwal.runner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+
+import in.prajwal.entity.CitizenPlan;
+import in.prajwal.repo.CitizenPlanRepository;
+
+public class DataLoader implements ApplicationRunner{
+     
+	@Autowired
+	private CitizenPlanRepository repo;
+	@Override
+	public void run(ApplicationArguments args) throws Exception {
+	     //cash plan data
+		CitizenPlan c1 = new CitizenPlan();
+		c1.setCitizenName("John");
+		c1.setGender("male");
+	}
+
+}
